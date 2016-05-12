@@ -23,22 +23,23 @@ $(document).ready( function() {
   });
 
   $('.nav-link').on('click', function() {
-    closeMenu();
+    setTimeout(function() {
+      closeMenu();
+    },1000);
     
   });
-  $(".nav-link").click(function() {
-    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
-        e.preventDefault();
-        var target = this.hash,
-        $target = $(target);
-
-        $('html, body').stop().animate( {
-            'scrollTop': $target.offset().top-40
-        }, 900, 'swing', function () {
-            window.location.hash = target;
-        } );
-    });
-  });
+  $('a[href*=\\#]:not([href=\\#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });  
 });
 
 

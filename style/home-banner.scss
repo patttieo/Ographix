@@ -1,0 +1,15 @@
+.home-banner {
+  padding:20rem 0;
+  height: 100vh;
+  text-align: center;
+  .banner-content {
+    line-height:0;
+    h1 {
+      font-size:6rem;
+    }
+    h2 {
+      font-family:$body-copy;
+      font-size:3rem;
+    }
+  }
+}

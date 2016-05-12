@@ -8204,11 +8204,141 @@ th.hide-for-touch {
     display: table-cell !important;
   }
 }
+html, body {
+  font-size: 100%;
+}
+
+p, li {
+  font-size: 0.9775rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.375rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 25em) {
+  html, body {
+    font-size: 101%;
+  }
+}
+@media (min-width: 35em) {
+  html, body {
+    font-size: 102%;
+  }
+}
+@media (min-width: 45em) {
+  html, body {
+    font-size: 103%;
+  }
+}
+@media (min-width: 55em) {
+  html, body {
+    font-size: 105%;
+  }
+}
+@media (min-width: 65em) {
+  html, body {
+    font-size: 107%;
+  }
+}
+@media (min-width: 75em) {
+  html, body {
+    font-size: 109%;
+  }
+}
+@media (min-width: 85em) {
+  html, body {
+    font-size: 112%;
+  }
+}
+@media (min-width: 95em) {
+  html, body {
+    font-size: 116%;
+  }
+}
+@media (min-width: 105em) {
+  html, body {
+    font-size: 122%;
+  }
+}
+@media (min-width: 115em) {
+  html, body {
+    font-size: 130%;
+  }
+}
+@media (min-width: 125em) {
+  html, body {
+    font-size: 138%;
+  }
+}
+body {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "alternate-gothic-no-3-d", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 7rem;
+  padding-bottom: 5rem;
+}
+.section-title span {
+  display: block;
+}
+
+.home-banner {
+  padding: 20rem 0;
+  height: 100vh;
+  text-align: center;
+}
+.home-banner .banner-content {
+  line-height: 0;
+}
+.home-banner .banner-content h1 {
+  font-size: 6rem;
+}
+.home-banner .banner-content h2 {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 3rem;
+}
+
 .menu-controller {
-  position: relative;
+  position: fixed;
   top: 7px;
   right: 3.3rem;
   float: right;
+  z-index: 3;
 }
 
 .long-menu {
@@ -8231,7 +8361,7 @@ th.hide-for-touch {
   top: 50%;
   right: 0.25rem;
   display: block;
-  background: white;
+  background: #000;
   font-size: 0px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -8255,7 +8385,7 @@ th.hide-for-touch {
   right: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: #000;
   content: '';
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -8266,7 +8396,7 @@ th.hide-for-touch {
 .menu-open .m-menu-open-trigger span:after,
 .menu-open .m-menu-default span:before,
 .menu-open .m-menu-default span:after {
-  background: white !important;
+  background: #000 !important;
 }
 
 .m-menu-open-trigger span:before, .m-menu-default span:before {
@@ -8377,7 +8507,7 @@ th.hide-for-touch {
   display: block;
   outline: none;
   font-weight: normal;
-  font-size: 6rem;
+  font-size: 4rem;
   margin: 0.575rem;
   color: #e1e1e1;
   text-transform: capitalize;
@@ -8388,265 +8518,116 @@ th.hide-for-touch {
   text-shadow: 0px 0px 4px #fff;
 }
 
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.cf:after {
-  clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-  *zoom: 1;
-}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-.big-img {
-  padding: 25vh 10%;
-  width: 100vw;
-  box-sizing: border-box;
-  -webkit-transform-style: inherit;
-  transform-style: inherit;
+.mywork .section-title span {
   position: relative;
+  top: -1rem;
+  font-size: 3rem;
 }
-
-/* Button 2 */
-.button {
-  background: #cb4e4e;
-  color: #fff;
-  box-shadow: 0 6px #ab3c3c;
-  -webkit-transition: none;
-  -moz-transition: none;
-  transition: none;
-}
-
-/* Button 2a */
-.button {
-  border-radius: 0 0 5px 5px;
-}
-
-.button:hover {
-  box-shadow: 0 4px #ab3c3c;
-  top: 2px;
-}
-
-.button:active {
-  box-shadow: 0 0 #ab3c3c;
-  top: 6px;
-}
-
-.main-wrapper {
-  font-family: "museo-sans-1","museo-sans-2",sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.4;
-}
-
-.gothic-o {
-  font-family: "gothic-open-shaded-1","gothic-open-shaded-2",sans-serif;
-}
-
-.lobster {
-  font-family: "lobster-1","lobster-2",serif;
-}
-
-.league {
-  font-family: "league-gothic-1","league-gothic-2",sans-serif;
-}
-
-.meseo {
-  font-family: "museo-sans-1", "museo-sans-2", sans-serif;
-}
-
-video#bgvid {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background-size: cover;
-}
-
-.banner-section {
-  position: relative;
-  padding: 15vh 10%;
-}
-
-.intro-wrapper {
-  padding: 0 20%;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-.intro-wrapper h1 {
-  font-size: 70px;
-}
-.intro-wrapper h1 span {
-  display: block;
-  text-transform: none;
-  font-size: 60px;
-}
-.intro-wrapper h2 {
-  font-size: 25px;
-}
-.intro-wrapper .mywork-button {
-  padding: 10px;
-  margin: 20px 0 0;
-  display: inline-block;
-  border: 1px solid #fff;
-  font-size: 30px;
-}
-
-.port-sections {
-  height: 100%;
-}
-
-.ports {
-  float: left;
-  width: 50%;
-  display: block;
-  height: 60em;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  max-width: 100%;
-}
-.ports a.port-wrap {
-  color: #000;
-  text-decoration: none;
-}
-.ports .port-content {
-  position: relative;
-  top: 80%;
-  display: none;
-}
-.ports .port-content .title {
-  font-size: 40px;
-}
-
-.port-wrap {
+.mywork .work-example {
   overflow: hidden;
-  max-width: 100%;
+  height: 140vh;
   width: 100%;
-  height: 100%;
-  display: block;
-  background-size: auto 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  transition: all .25s ease-in-out;
-}
-.port-wrap:hover {
-  background-size: auto 105%;
-}
-
-.port-about {
-  width: 100%;
-  position: relative;
-  left: 0;
-  display: none;
-  top: 100%;
-  min-height: 250px;
-  float: left;
-}
-
-.port-one {
-  background-image: url(../static/port-one.jpg);
-}
-
-.port-two {
-  background-image: url(../static/port-two.jpg);
-}
-
-.about-content {
-  background: url(../static/mydesk.jpg) no-repeat center center;
-  background-size: cover;
-  height: 75vh;
-  padding: 17% 15% 0;
   text-align: center;
-  color: #fff;
+  position: relative;
+  padding-bottom: 20%;
 }
-.about-content h2 {
-  font-size: 30px;
-  padding: 20px 0;
+.mywork .work-example h2 {
+  padding-bottom: 2rem;
+  font-size: 4rem;
 }
-
-.map {
+.mywork .work-example .work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 20em;
+  height: 10%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */
 }
-
-.contact-info-wrapper {
-  padding: 10% 0;
+.mywork .example-description {
+  position: relative;
+  display: inline-block;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  padding-bottom: 15%;
 }
-
-.contact-info {
-  width: 50%;
-  float: left;
-  text-align: right;
-  font-size: 25px;
-  padding-right: 10px;
+.mywork .example-description .description-content {
+  position: relative;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  padding: 2rem 15vw;
 }
-.contact-info h2 {
-  padding-bottom: 20px;
-  font-size: 50px;
+.mywork .example-description .description-content .example-link {
+  padding-top: 2rem;
 }
-.contact-info h2 span {
+.mywork .example-description .description-content .example-link h3 {
+  font-size: 2rem;
+}
+.mywork .example-description .description-content .example-link a {
+  font-size: 1.5rem;
+  color: #000;
+}
+.mywork .example-description:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  padding-bottom: 50%;
+  width: 57.7%;
+  z-index: 1;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(-30deg) skewX(30deg);
+  -ms-transform: rotate(-30deg) skewX(30deg);
+  transform: rotate(-30deg) skewX(30deg);
+}
+.mywork .example-one {
+  background: url(../static/mywork-timberthreads.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.mywork .example-two {
+  background: url(../static/mywork-timberhockey.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.mywork .example-three {
+  background: url(../static/mywork-timberhockey.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.mywork .example-three h2 span {
+  font-size: 1.5rem;
   display: block;
-}
-.contact-info .info {
-  padding: 10px 0;
-  font-size: 18px;
+  font-family: "proxima-nova", sans-serif;
 }
 
-.contact-form-wrapper {
-  padding-left: 20px;
-  width: 50%;
-  float: right;
+.about-section {
+  height: 100vh;
 }
-.contact-form-wrapper input[type=text] {
-  padding: 20px 0;
-  margin: 10px 0;
-  width: 50%;
-}
-.contact-form-wrapper textarea {
-  width: 50%;
-}
-.contact-form-wrapper input[type=submit] {
-  display: block;
+.about-section .section-title {
+  padding-top: 3rem;
 }
 
-.submit-button {
-  border: none;
-  padding: 10px;
-  font-size: 20px;
+.contact-section {
+  height: 100vh;
+}
+.contact-section .section-title {
+  padding-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

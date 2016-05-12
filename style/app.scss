@@ -1,7 +1,12 @@
 
 @import "../bower_components/foundation/scss/foundation";
 
+@import "responsive-base";
+@import "variables";
 @import "common";
 @import "header";
+@import "home-banner";
 @import "menu";
-@import "home-page";
+@import "mywork";
+@import "about";
+@import "contact";

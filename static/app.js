@@ -9801,39 +9801,85 @@ return this["JST"];
 'use strict';
 
 require('./templates');
+require('./menu');
 
-},{"./templates":49}],49:[function(require,module,exports){
+},{"./menu":49,"./templates":50}],49:[function(require,module,exports){
+
+$(document).ready(function () {
+  console.log('hello?');
+
+  function openMenu() {
+    $('.m-menu-default').hide();
+    $('.m-menu-open-trigger').addClass("menu-open");
+    $('.m-menu-open-trigger').show();
+    $('.menu').addClass('menu--open');
+  }
+  function closeMenu() {
+    console.log('cool?');
+    $('.m-menu-default').show();
+    $('.m-menu-open-trigger').removeClass("menu-open");
+    $('.m-menu-open-trigger').hide();
+    $('.menu').removeClass('menu--open');
+  }
+  $('.m-menu-open-trigger').on('click', function () {
+    closeMenu();
+  });
+  $('.m-menu-default').on('click', function () {
+    openMenu();
+  });
+
+  $('.nav-link').on('click', function () {
+    closeMenu();
+  });
+  $(".nav-link").click(function () {
+    $('a[href^="#"]').bind('click.smoothscroll', function (e) {
+      e.preventDefault();
+      var target = this.hash,
+          $target = $(target);
+
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top - 40
+      }, 900, 'swing', function () {
+        window.location.hash = target;
+      });
+    });
+  });
+});
+
+},{}],50:[function(require,module,exports){
 'use strict';
 
-var handlebars = require('handlebars'),
-    compiledTemplates = require('./compiled/templates')(handlebars),
-    _ = require('underscore'),
-    templates = {};
+var _this = this;
 
-_.each(compiledTemplates, function (value, key) {
+const handlebars = require('handlebars'),
+      compiledTemplates = require('./compiled/templates')(handlebars),
+      _ = require('underscore'),
+      templates = {};
+
+_.each(compiledTemplates, (value, key) => {
   templates[key.replace('templates/browser/', '').replace('.hbs', '')] = value;
 });
 
-handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+handlebars.registerHelper('ifCond', (v1, operator, v2, options) => {
   switch (operator) {
     case '==':
-      return v1 === v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 === v2 ? options.fn(_this) : options.inverse(_this);
     case '===':
-      return v1 === v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 === v2 ? options.fn(_this) : options.inverse(_this);
     case '<':
-      return v1 < v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 < v2 ? options.fn(_this) : options.inverse(_this);
     case '<=':
-      return v1 <= v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 <= v2 ? options.fn(_this) : options.inverse(_this);
     case '>':
-      return v1 > v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 > v2 ? options.fn(_this) : options.inverse(_this);
     case '>=':
-      return v1 >= v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 >= v2 ? options.fn(_this) : options.inverse(_this);
     case '&&':
-      return v1 && v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 && v2 ? options.fn(_this) : options.inverse(_this);
     case '||':
-      return v1 || v2 ? options.fn(undefined) : options.inverse(undefined);
+      return v1 || v2 ? options.fn(_this) : options.inverse(_this);
     default:
-      return options.inverse(undefined);
+      return options.inverse(_this);
   }
 });
 

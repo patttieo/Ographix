@@ -15,7 +15,6 @@ module.exports = (grunt) => {
         options: {
           transform: [
             ['babelify', {
-              presets: ['es2015'],
               ignore: 'scripts/compiled/*.js',
             }],
           ],
@@ -123,7 +122,6 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-notify');
-  grunt.loadNpmTasks('grunt-aws');
 
   grunt.registerTask('dev', ['default', 'watch']);
   grunt.registerTask('default', ['sass', 'handlebars', 'browserify']);

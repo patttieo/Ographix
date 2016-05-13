@@ -9802,9 +9802,9 @@ return this["JST"];
 
 require('./templates');
 require('./menu');
-require('./mywork');
+// require('./mywork');
 
-},{"./menu":49,"./mywork":50,"./templates":51}],49:[function(require,module,exports){
+},{"./menu":49,"./templates":50}],49:[function(require,module,exports){
 
 $(document).ready(function () {
   console.log('hello?');
@@ -9832,7 +9832,7 @@ $(document).ready(function () {
   $('.nav-link').on('click', function () {
     setTimeout(function () {
       closeMenu();
-    }, 1000);
+    }, 100);
   });
   $('a[href*=\\#]:not([href=\\#])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -9849,22 +9849,6 @@ $(document).ready(function () {
 });
 
 },{}],50:[function(require,module,exports){
-$(document).ready(function () {
-  console.log("ellqwdqw");
-  var $imgTrigger = $('.image-trigger');
-  $('.ha-waypoint').each(function (i) {
-    var $el = $(this),
-        animClassDown = $el.data('animateDown');
-
-    $el.waypoint(function (direction) {
-      if (direction === 'down' && animClassDown) {
-        $el.addClass("image-active");
-      }
-    }, { offset: '50%' });
-  });
-});
-
-},{}],51:[function(require,module,exports){
 'use strict';
 
 var _this = this;

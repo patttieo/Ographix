@@ -60,9 +60,9 @@ module.exports = (grunt) => {
       },
     },
     watch: {
-      // options: {
-      //   livereload: true,
-      // },
+      options: {
+        livereload: true,
+      },
       sass: {
         files: ['style/*.scss'],
         tasks: ['sass'],

@@ -25,7 +25,7 @@ $(document).ready( function() {
   $('.nav-link').on('click', function() {
     setTimeout(function() {
       closeMenu();
-    },1000);
+    },100);
     
   });
   $('a[href*=\\#]:not([href=\\#])').click(function() {

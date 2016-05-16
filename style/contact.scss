@@ -1,6 +1,18 @@
 .contact-section {
+  min-height: 100vh;
+  position:relative;
+  overflow: hidden;
+  text-align:center;
   .section-title {
     padding-top: 2rem;
+    span {
+      font-size:2rem;
+      font-family: $body-copy;
+    }
   }
-  height: 100vh;
+  a {
+    color:#000;
+    margin:0 0.5rem;
+    width: 100%;
+  }
 }

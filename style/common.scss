@@ -18,9 +18,13 @@ h4 {
 
 .section-title {
     text-align: center;
-    font-size:7rem;
+    font-size:5rem;
     padding-bottom:5rem;
+    padding-top:2rem;
   span {
-    display: block;
+      position:relative;
+      top:-1rem;
+      font-size:3rem;
+      display: block;
   }
 }
